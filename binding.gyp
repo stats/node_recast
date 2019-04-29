@@ -15,6 +15,17 @@
           "<!(node -e \"require('nan')\")"
       ],
 
+      'conditions': [
+        ['OS=="linux"', {
+          'include_dirs!': [
+            './SDL'
+          ],
+          'include_dirs': [
+            '/usr/include/SDL'
+          ]
+        }]
+      ],
+
       "sources": [ 
       './recastnavigation/DebugUtils/Source/DebugDraw.cpp',
       './recastnavigation/DebugUtils/Source/DetourDebugDraw.cpp',
