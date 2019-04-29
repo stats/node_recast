@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "install": "node-gyp rebuild",
-    "test" : "node test/test.js"
+    "test": "node test/test.js"
   },
   "private": false,
   "gypfile": true,
   "dependencies": {
-    "bindings": "^1.2.1",
-    "nan": "^2.3.3"
+    "bindings": "^1.5.0",
+    "nan": "^2.13.2"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,9 @@
   "keywords": [
     "recast",
     "navigation",
-    "node","pathfind","mesh"
+    "node",
+    "pathfind",
+    "mesh"
   ],
   "author": "liuhaochuan & zhangyu",
   "license": "MIT"
