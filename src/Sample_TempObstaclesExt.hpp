@@ -32,6 +32,7 @@ public:
     void SetDetailSampleDist(float val) { m_detailSampleDist = val; }
     void SetDetailSampleMaxError(float val) { m_detailSampleMaxError = val; }
     void SetPartitionType(int val) { m_partitionType = val; }
+    void SetTileSize(float val) { m_tileSize = val; }
     unsigned int addTempObstacle(const float posX,const float posY,const float posZ,const float radius, const float height);
     unsigned int removeTempObstacle(const unsigned int ref);
     unsigned int findNearestPoint(float cx, float cy, float cz,float extx, float exty, float extz,float *nearestPos,dtPolyRef *ref);

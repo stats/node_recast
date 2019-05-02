@@ -39,6 +39,7 @@ NAN_MODULE_INIT(Sample_TempObstaclesWrap::Init) {
     Nan::SetPrototypeMethod(t, "setDetailSampleDist", SetDetailSampleDist);
     Nan::SetPrototypeMethod(t, "setDetailSampleMaxError", SetDetailSampleMaxError);
     Nan::SetPrototypeMethod(t, "setPartitionType", SetPartitionType);
+    Nan::SetPrototypeMethod(t, "setTileSize", SetTileSize);
     Nan::SetPrototypeMethod(t, "update", Update);
     Nan::SetPrototypeMethod(t, "addTempObstacle", AddTempObstacle);
     Nan::SetPrototypeMethod(t, "removeTempObstacle", RemoveTempObstacle);
@@ -181,6 +182,13 @@ NAN_METHOD(Sample_TempObstaclesWrap::SetPartitionType) {
     Sample_TempObstaclesWrap* obj = Nan::ObjectWrap::Unwrap<Sample_TempObstaclesWrap>(info.This());
     OPTIONAL_ARGUMENT_INTEGER(0, val,0);
     obj->getSample_TempObstacles()->SetPartitionType(val);
+    info.GetReturnValue().Set(info.This());
+}
+
+NAN_METHOD(Sample_TempObstaclesWrap::SetTileSize) {
+    Sample_TempObstaclesWrap* obj = Nan::ObjectWrap::Unwrap<Sample_TempObstaclesWrap>(info.This());
+    OPTIONAL_ARGUMENT_FLOAT(0, val, 48);
+    obj->getSample_TempObstacles()->SetTileSize(val);
     info.GetReturnValue().Set(info.This());
 }
 

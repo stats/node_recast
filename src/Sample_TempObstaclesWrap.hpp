@@ -37,6 +37,7 @@ public:
     static NAN_METHOD(SetDetailSampleDist);
     static NAN_METHOD(SetDetailSampleMaxError);
     static NAN_METHOD(SetPartitionType);
+    static NAN_METHOD(SetTileSize);
     static NAN_METHOD(Update);
     static NAN_METHOD(AddTempObstacle);
     static NAN_METHOD(RemoveTempObstacle);
