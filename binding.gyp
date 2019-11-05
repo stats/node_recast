@@ -21,7 +21,7 @@
             './SDL'
           ],
           'include_dirs': [
-            '/usr/include/SDL'
+            '/usr/include/SDL2'
           ]
         }]
       ],
